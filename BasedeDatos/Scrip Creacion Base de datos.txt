@@ -1,0 +1,32 @@
+create database productos_ventas; 
+
+use productos_ventas;
+
+create table producto(
+ID int IDENTITY(1,1) PRIMARY KEY,
+NOMBRE varchar(50),
+VALOR decimal(12,2)
+);
+
+create table cliente(
+ID int IDENTITY(1,1) PRIMARY KEY,
+CEDULA varchar(11),
+NOMBRE varchar(50),
+APELLIDO varchar(50),
+TELEFONO int
+);
+
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(1, 'ARROZ', 1200);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(2, 'AZUCAR MORENA', 1500);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(3, 'ACEITE', 5000);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(4, 'MANTEQUILLA', 2500);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(6, 'LENTEJAS', 3200);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(7, 'SALSA ROSADA', 3500);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(8, 'JAMON PIETRAN', 6200);
+INSERT INTO productos_ventas.dbo.producto (ID, NOMBRE, VALOR) VALUES(10, 'REFISAL', 1800);
+
+
+INSERT INTO productos_ventas.dbo.cliente (ID, CEDULA, NOMBRE, APELLIDO, TELEFONO) VALUES(1, '14136457', 'ALEXIS', 'ROZO', 123456);
+INSERT INTO productos_ventas.dbo.cliente (ID, CEDULA, NOMBRE, APELLIDO, TELEFONO) VALUES(2, '1110574828', 'DAYANA YISED', 'RODRIGUEZ', 987456);
+INSERT INTO productos_ventas.dbo.cliente (ID, CEDULA, NOMBRE, APELLIDO, TELEFONO) VALUES(4, '1110443217', 'CRISTIAN', 'BAHAMON', 32046321);
+INSERT INTO productos_ventas.dbo.cliente (ID, CEDULA, NOMBRE, APELLIDO, TELEFONO) VALUES(6, '11102598', 'ANDRES', 'PARDO', 5523612);
